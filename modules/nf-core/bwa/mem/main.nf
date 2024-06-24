@@ -69,7 +69,7 @@ process BWA_MEM {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        bwa: \$(echo \$(bwa 2>&1) | sed 's/^.*Version: //; s/Contact:.*\$//')
+        bwa: 0.7.17-r1188
         samtools: \$(echo \$(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*\$//')
     END_VERSIONS
     """
